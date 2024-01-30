@@ -48,7 +48,15 @@
             // the prompt function takes an argument (variable) - tje text tjat will be shown to the user with prompt
             // the prompt function returns the value that the user entered in
             // set the num1 variable equal to the value the user entered in
-            num1 = prompt("Please enter number 1: "); // most lines of javaScript need a ; at the end 
+            
+            // do while loop will run at least 1 time, and then can run as
+            // many times as needed; while loops may run 0 times
+            do{
+                // make the user enter a number; this loop will run until run until a number
+                // the loop will keep running
+                num1 = prompt("Please enter number 1: "); // most lines of javaScript need a ; at the end 
+            }while(isNaN(num1) || num1 == 0); // this ; is mandatory
+           
 
             //get another number from the user and assign it to the num2 variable
             num2 = prompt("Please enter number 2: "); // most lines of javaScript need a ; at the end 
@@ -70,9 +78,62 @@
     </script>
 
     <h2>Decision Logic (if/else)</h2>
+    
+    <script>
+        //creating a variable called age with a default value of 5
+        // 1 equal sign is assignment, the variable on the left is assigned the
+        // value on the right
+        var age = 5;
+        // 2 equal signed mean check for equality, or does the value on the left side
+        // match the value on the right side 
+        //if statement, test a value, if the test results in true, runt the if block of code
+        if (age == 5){
+            // this code will run uf the value if the age variable is 6
+            alert("age=" + age);
+        }
+        // the else statement is a catch-all, it will run if none of the if/else if
+        //statements are true
+        else{
+            //thiscode will run if the value of the age variable is anything other than
+            //5 or 6
+            alert("age was not 5 or 6");
+        }
+
+    </script>
 
     <h2>Loops</h2>
 
+    <script>
+        // loops run code repeatedly
+        //they are great for displaying Data
+        // there are 2 basic types of loops - for loop and awhile loop
 
+        // for loops are generally used when you know how many times you want
+        // the code to run
+        // 1st part of our for loop is a counter variable, and we are setting it 
+        // to a default value of 0
+        // 2nd part the condition that the for loop will test on each run
+        // the loop will run as long as this condition is true
+        //3rd part is implementing the counter variable each time the loop runs
+        // i++ is the same thing as i = i + 10
+        for(var i = 0; i < 5; i++){
+            alert("i=" + i);
+        }
+        // counter variable, set to default value of 0
+        var counter = 0;
+                    //while loop will run until the counter is equal to 5
+        while(counter < 5){
+            //display the value of counter is an alert
+            alert("counter=" + counter);
+            
+            //increase the value of counter by 1 every time the loop runs
+            counter++;
+        }
+
+        // while loops are generally used when you do not know how many times you
+        // want the code to run
+
+
+    </script>
 </body>
 </html>
