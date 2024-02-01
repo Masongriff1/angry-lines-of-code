@@ -12,12 +12,11 @@ h1{
 }
 
 nav{
-    height: 60px;
-
-width: 200px;
-float: left;
-padding:5px;
-line-height: 30px;
+    height: 600px;
+    width: 200px;
+    float: left;
+    padding:5px;
+    line-height: 30px;
 }
 
 footer{
@@ -25,6 +24,7 @@ footer{
     bottom: 0;
     left: 50%;
     text-align: center;
+    margin-right: 200px;
 }
 
 /* This is a custom selector - it will only affect an item on the HTML page that has an ID od memeImage;
@@ -34,6 +34,7 @@ these settings will help with a future assignment. */
     left: 25%;
     top: 25%;
     width: 200px;
+    margin-right: 200px;
 }
 header{
     text-align: center;
