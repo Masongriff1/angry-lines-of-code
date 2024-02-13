@@ -150,5 +150,75 @@
 
 
     </script>
+
+    <!-- We will build an HTML form so we can gather user input and then validate it.
+    method="post" is the best way to handle what happens with the data in the form. it
+will post the data to the page instead of putting the data in the querystring (URL) -->
+    <form method="post" onsubmit="return validateForm();">
+        <!-- Label should be linked to the input by the name of the input -->
+        <label for="fullname">Full Name:</label>
+        <!-- Text box input where we can gather the user's full name -->
+        <input type="text" id="fullname" name="fullname">
+        <br><br>
+        <!-- label for the email -->
+        <label for="theEmail">Email Address:</label>
+        <!-- Text box input where we can gather the user's emai; address -->
+        <input type="email" id="theEmail" name="theEmail">
+        <br><br>
+        <!-- Lebel for age -->
+        <label for="age">Age:</label>
+        <!-- Text box input where we can hather the user's age -->
+        <input type="number" id="age" name="age">
+        <br><br>
+        <!-- Create a submit button so the form can be validated, etc. -->
+        <input type="submit" value="Submit">
+    </form>
+
+        <script>
+            // This function will validate the input that the user entered in our form
+            function validateForm(){
+                // full name the user entered, stored in a variable
+                var fullName = document.getElementById("fullname").value;
+                // email the user entered, stored in a variable called email
+                var  email = document.getElementById("theEmail").value;
+                // age the user entered, stored in a variable called age
+                var age = document.getElementById("age").value;
+
+
+                // check to make sure the user has entered a name
+                if (fullName.trim() == ""){
+                    // tell the user to enter a name
+                    alert("Please enter your name.");
+                    // don't allow the form to submit to the server
+                    return false; 
+                }
+
+                if (email.trim() == ""){
+                    // tell the user to enter a name
+                    alert("Please enter your email.");
+                    // don't allow the form to submit to the server
+                    return false; 
+                }
+
+
+                if (age.trim() == ""){
+                    // tell the user to enter a name
+                    alert("Please enter your age.");
+                    // don't allow the form to submit to the server
+                    return false; 
+                }
+
+                // Check if age is a number; if the input is not a number, this if statement will be true
+                if (isNaN(age)){
+                    // tell the user to enter a number
+                    alert("Please enter a valid age");
+                    // don't allow the form to submit to the server
+                    return false;
+                }
+
+                // allow the form to submit to the server
+                return true;
+            }
+        </script>
 </body>
 </html>
