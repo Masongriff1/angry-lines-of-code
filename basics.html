@@ -220,5 +220,29 @@ will post the data to the page instead of putting the data in the querystring (U
                 return true;
             }
         </script>
+
+        <!-- Event Driven programming section -->
+        <h2>Event Driven Programming</h2>
+        <!-- Button 1 -->
+        <button id="button1">Click Me</button>
+        <!-- Button 2 -->
+        <button id="button2" onclick="handleClick2();">Click Me</button>
+        <script>
+            // create a shortcut to refer to the HTML button (button 1)
+            var button1 = document.getElementById("button1");
+
+            // this is our event handler; it is just a function that we set up to run when the button is clicked
+            function handleClick(event){
+                alert("Button Clicked")
+            }
+
+            // Wire the button to listen for the event (when the button is clicked)
+            button1.addEventListener("click", handleClick);
+
+            // function to handle the button 2 click event
+            function handleClick2(){
+                alert("Button 2 Clicked")
+            }
+        </script>
 </body>
 </html>
