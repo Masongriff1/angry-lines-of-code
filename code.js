@@ -205,3 +205,41 @@ function palindromeTest(strToTest){
     // test to see if the 2 strings are the same, both forwards and backwards; if the words are the same, the function will return true; if not, the function will become false
     return strRev == strCleaned;
 }
+
+// Sound code
+function addSound(){
+    // Create an audio HTML element in JavaScript that we will add to the HTML page
+    var soundElem = document.createElement("audio");
+
+    // Nickname to the play button in the HTML
+    var playButton = document.getElementById("btnPlay");
+
+    var pauseButton = document.getElementById("btnPause");
+
+    // set the attributes for our sound elements - for the id, make sure there are no spaces
+    soundElem.setAttribute("id", "mySound");
+    // specify the sound file
+    soundElem.setAttribute("src", "us-lab-background.mp3")
+
+    soundElem.setAttribute("controls", "controls");
+
+    // Add the audio HMTL element to the page
+    document.body.appendChild(soundElem);
+
+    console.log("sound element added to the page.")
+    // Make the play and pause buttons visible
+    playButton.hidden = false;
+    pauseButton.hidden = false;
+}
+
+function playSound(){
+    var audio = document.getElementById("mySound");
+    audio.play();
+    console.log("soundplayed");
+}
+
+function pauseSound(){
+    var audio = document.getElementById("mySound");
+    audio.pause();
+    console.log("soundpaused");
+}
