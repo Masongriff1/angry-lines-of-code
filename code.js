@@ -243,3 +243,75 @@ function pauseSound(){
     audio.pause();
     console.log("soundpaused");
 }
+
+// this function will run the user clicks on the button to show the plants
+function showPlants(){
+// this array will hold all of our plant names - an array is 1 variable that holds multiple values
+var plantsArr = ["Spider Plant","Orchid","Pothos","Succulent",  "Lavender","Money Tree","Jasmine","Hibiscus","Fern","Cactus","Lucky Bamboo","Daisy","Geranium"];
+            
+            
+var plantDiv = document.getElementById("plantContainer");
+
+var plantButton = document.getElementById("btnPlants");
+
+//create an unordered list (by default it will have bullet points)
+var plantUl = document.createElement("ul");
+
+// add the unordered list to the html page on the div
+plantDiv.appendChild(plantUl);
+
+// loop through the plant listt array and create a list item for each plant
+// i is the counter variable; the loop should run as long as i is less then the number of items in the array; increase the value of i by 1 each time the loop runs
+for (var i=0; i<plantsArr.length; i++){
+//create a list item
+var plantLi = document.createElement("li");
+
+// add the name of the plant to the text of the list item
+plantLi.textContent = plantsArr[i];
+
+// add thee list item to the unordered list
+plantUl.appendChild(plantLi);
+}
+
+// hide the show plants button
+plantButton.remove();
+}
+
+function showStats(){
+var gameNameArr = [
+"Fortnite",
+                "Minecraft",
+                "Lethal Conpany",
+                "Call Of Duty",
+                "Helldivers 2"
+            ];
+
+            var playTimeArr = [
+                "50 hours",
+                "60 hours",
+                "900 hours",
+                "20 hours",
+                "500 hours"
+            ];
+
+            var statsDiv = document.getElementById("statsContainer");
+
+            var statsButton = document.getElementById("btnStats");
+
+            //create an unordered list (by default it will have bullet points)
+            var statsUl = document.createElement("ul");
+
+            // add the unordered list to the html page on the div
+            statsDiv.appendChild(statsUl);
+
+            for (var i=0; i<gameNameArr.length; i++){
+                var statsLi = document.createElement("li");
+
+                // add the name of the plant to the text of the list item
+                statsLi.textContent = gameNameArr[i] + ": " + playTimeArr[i];
+
+                // add thee list item to the unordered list
+                statsUl.appendChild(statsLi);
+            }
+            statsButton.remove();
+        }
