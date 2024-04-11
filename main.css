@@ -1,25 +1,25 @@
 /* This is a comment in CSS. This 
 The format of a CSS style is: 
 */
-body{
+body {
     background-color: blue;
     color: beige;
 }
 
-h1{
+h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(249, 0, 0, 0.407);
 }
 
-nav{
+nav {
     height: 600px;
     width: 200px;
     float: left;
-    padding:5px;
+    padding: 5px;
     line-height: 30px;
 }
 
-footer{
+footer {
     position: fixed;
     bottom: 0;
     left: 50%;
@@ -29,19 +29,48 @@ footer{
 
 /* This is a custom selector - it will only affect an item on the HTML page that has an ID od memeImage;
 these settings will help with a future assignment. */
-#memeImage{
+#memeImage {
     position: absolute;
     left: 25%;
     top: 25%;
     width: 200px;
     margin-right: 200px;
 }
-header{
+
+header {
     text-align: center;
 }
 
 /* Anchor tag styles - make the hyperlinks look better */
-a{
+a {
     text-decoration: none;
     color: green;
 }
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* this prevents stacked border lines */
+}
+
+th, td {
+    border: 1px solid white;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: rgb(128, 114, 238);
+    color: black;
+}
+
+tr:hover{
+    background-color: darkblue;
+}
+
