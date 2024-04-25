@@ -109,6 +109,7 @@ function validateForm(){
 var intervalId = 0;
 
 // this function will make our image move around
+
 function startImageMove(){
     // create a  variable that points to our HTML meme image
     var meme = document.getElementById("memeImage");
